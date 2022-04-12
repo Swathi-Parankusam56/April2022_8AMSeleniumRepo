@@ -52,8 +52,8 @@ public class BaseTest
 			option.addArguments("user-data-dir=C:\\Users\\ravi\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 12");
 			option.addArguments("--disable-notifications");
 			option.addArguments("--start-maximized");
-			option.addArguments("--ignore-certificate-errors-spki-list");
-			option.addArguments("--proxy-server=https://192.168.10.1:9090");
+			//option.addArguments("--ignore-certificate-errors-spki-list");
+			//option.addArguments("--proxy-server=https://192.168.10.1:9090");
 			
 			driver = new ChromeDriver(option);
 		}
@@ -74,13 +74,13 @@ public class BaseTest
 			profile.setPreference("dom.webnotifications.enabled", false);
 			
 			//Certificate error Handling
-			profile.setAcceptUntrustedCertificates(true);
-			profile.setAssumeUntrustedCertificateIssuer(false);
+			//profile.setAcceptUntrustedCertificates(true);
+			//profile.setAssumeUntrustedCertificateIssuer(false);
 			
 			//How to work with proxy Settings
-			profile.setPreference("network.proxy.type", 1);
-			profile.setPreference("network.proxy.socks", "192.168.10.1");
-			profile.setPreference("network.proxy.socks_port", 1744);
+			//profile.setPreference("network.proxy.type", 1);
+			//profile.setPreference("network.proxy.socks", "192.168.10.1");
+			//profile.setPreference("network.proxy.socks_port", 1744);
 			
 			driver = new FirefoxDriver(option);
 		}
