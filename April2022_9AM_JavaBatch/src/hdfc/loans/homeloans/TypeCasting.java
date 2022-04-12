@@ -47,10 +47,11 @@ public class TypeCasting
 		System.out.println(s1+s2);
 		
 		float f1 = Float.parseFloat(s1);
-		Float fp1 = Float.valueOf(f1);
 		float f2 = Float.parseFloat(s2);
-		Float fp2 = Float.valueOf(f2);
 		System.out.println(f1+f2);
+		
+		Float fp1 = Float.valueOf(f1);
+		Float fp2 = Float.valueOf(f2);
 		System.out.println(fp1+fp2);
 		
 		int p1 = Integer.parseInt(s1);
