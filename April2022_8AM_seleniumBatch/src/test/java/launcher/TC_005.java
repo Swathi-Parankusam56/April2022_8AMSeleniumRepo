@@ -9,7 +9,7 @@ public class TC_005 extends BaseTest
 		launch("chromebrowser");
 		navigateUrl("amazonurl");
 		selectOption("amazondropbox_id","Books");
-		typeText("amazonsearchtextbox_id","Harry Potter");
+		typeText("amazonsearchtextbox_name","Harry Potter");
 		clickElement("amazonsearchbutton_xpath");
 		
 		
