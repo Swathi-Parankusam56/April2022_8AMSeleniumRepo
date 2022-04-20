@@ -3,7 +3,6 @@ package launcher;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,32 +14,50 @@ public class Example2
 	public static void main(String[] args) 
 	{
 		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.goibibo.com/");
-		driver.findElement(By.xpath("//span[contains(text(),'Departure')]")).click();
-		
-		int i=0;
-		List<WebElement> months = driver.findElements(By.xpath("//div[@class='DayPicker-Caption']/div"));
-		while(i<3)
-		{
-			WebElement m = driver.findElement(By.xpath("(//div[@class='DayPicker-Caption']/div)"+"["+(i+1)+"]"));
-			System.out.println(m.getText());
-			
-			if(!m.getText().contains("August 2022"))
-				i++;
-			else
-				driver.findElement(By.className("DayPicker-NavButton DayPicker-NavButton--next")).click();
-		}
-		
-		
-		/*
-		 * System.out.println(months.get(i).getText());
-		 * while(!months.get(i).getText().contains("August 2022")) { if(i<3) i++; else
-		 * driver.findElement(By.
-		 * className("DayPicker-NavButton DayPicker-NavButton--next")).click(); i=1; }
-		 */
+
+
+	  String month = "August 2022";
+	  WebDriverManager.chromedriver().setup();
+	  ChromeDriver driver = new ChromeDriver();
+	  driver.manage().window().maximize();
+	  driver.get("https://www.goibibo.com/");
+	  driver.findElement(By.xpath("//span[text()='Departure']")).click();
+	  List<WebElement> months = driver.findElements(By.xpath("//div[@class='DayPicker-Caption']/div"));
+	  
+	  for(int i=0;i<months.size();i++)
+	  {
+	   //System.out.println(months.get(i).getText());
+	   if(!months.get(i).getText().contains(month))
+	   {
+	    if (i == 1)
+	    {
+	     driver.findElement(By.xpath("//span[@aria-label='Next Month']")).click();
+	     months = driver.findElements(By.xpath("//div[@class='DayPicker-Caption']/div"));
+	     i=0;
+	    }
+	   }
+	   else
+	   {
+	    System.out.println(months.get(i).getText());
+	    
+	      List<WebElement> days = driver.findElements(By.xpath("//div[text()='"+month+"']/following::div[@class='DayPicker-Day']"));
+	      for(int d=0;d<days.size();d++)
+	      { 
+	       System.out.println(days.get(d).getText()); 
+	       if (days.get(d).getText().contains("11"))
+	       {
+	        days.get(d).click();
+	        return;
+	       }
+	       }
+	     
+	   }
+	   
+	  }
+	  
+	  //driver.close();
+
+
 
 	}
 
