@@ -18,6 +18,7 @@ public class AlertHandling
 		  WebDriverManager.chromedriver().setup();
 		  WebDriver driver=new ChromeDriver();
 		  driver.manage().window().maximize(); 
+		  //https://sreedharscce.com/
 		  driver.navigate().to("http://demo.guru99.com/selenium/delete_customer.php");
 		  
 		  driver.findElement(By.name("cusid")).sendKeys("53920");					
