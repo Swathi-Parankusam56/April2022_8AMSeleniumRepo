@@ -1,6 +1,8 @@
 package autoit;
 
+import java.time.Duration;
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +26,7 @@ public class FileDownloadUsingOptions
 		
 		String fileType = "PDF";
 		WebDriver driver;
+	
 		
 		//For Chrome Browser
 		
@@ -66,14 +69,19 @@ public class FileDownloadUsingOptions
 		option.setProfile(profile);
 		driver = new FirefoxDriver(option);*/
 		
+		 // Used in verions webdriver-2 & 3 series
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		 
+		// Used in verion webdriver-4 series
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.manage().window().maximize();
 		driver.get("https://file-examples.com/");
 		driver.manage().timeouts().getPageLoadTimeout();
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		
 		driver.findElement(By.xpath("//h3[text()='Documents']/following-sibling::a")).click();
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		driver.findElement(By.xpath("//td[text()='"+fileType+"']/following-sibling::td[2]/a")).click();
 		driver.findElement(By.xpath("//a[starts-with(text(),'Download sample')]")).click();
 	}
