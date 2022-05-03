@@ -22,7 +22,8 @@ public class FileDownloadUsingOptions
 
 	public static void main(String[] args) throws Exception 
 	{
-		//http://kb.mozillazine.org/About:config_entries
+		// https://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/pref_names.cm?revision=291266
+		// http://kb.mozillazine.org/About:config_entries
 		
 		String fileType = "PDF";
 		WebDriver driver;
