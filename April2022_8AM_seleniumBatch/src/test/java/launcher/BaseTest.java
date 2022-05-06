@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -252,6 +253,13 @@ public class BaseTest
 		test.log(Status.FAIL, failureMessage);
 		takesScreenshot();
 	}
+	
+	public static void highlight(WebElement Element)
+	{
+	  JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+	  jsExecutor.executeScript("arguments[0].setAttribute('style', 'background: green; border: 2px solid red;');", Element);
+	}
+
 
 	public static void takesScreenshot() throws Exception
 	{

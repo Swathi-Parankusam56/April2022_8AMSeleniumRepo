@@ -1,7 +1,5 @@
 package verificationsReportings;
 
-import com.aventstack.extentreports.Status;
-
 import launcher.BaseTest;
 
 public class Reporting extends BaseTest
