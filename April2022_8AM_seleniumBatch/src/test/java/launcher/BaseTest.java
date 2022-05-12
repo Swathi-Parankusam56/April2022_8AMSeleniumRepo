@@ -68,9 +68,9 @@ public class BaseTest
 		rep = ExtentManager.getInstance();
 	}
 	
-	public static void launch(String browserKey)
+	public static void launch(String browser)
 	{
-		if(p.getProperty(browserKey).equals("chrome"))
+		if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			
@@ -83,7 +83,7 @@ public class BaseTest
 			
 			driver = new ChromeDriver(option);
 		}
-		else if(p.getProperty(browserKey).equals("firefox"))
+		else if(browser.equals("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			
