@@ -10,3 +10,6 @@ Navigating to application : http://www.amazon.in
 Selecting option Books By using locator : searchDropdownBox
 Typing text Harry Potter By using Locator : field-keywords
 Clicked on Element By ussong Locator : //input[@id='nav-search-submit-button']
+Retrying test amazon with status FAILURE for the 1 time(s).
+Retrying test amazon with status FAILURE for the 2 time(s).
+Retrying test amazon with status FAILURE for the 3 time(s).

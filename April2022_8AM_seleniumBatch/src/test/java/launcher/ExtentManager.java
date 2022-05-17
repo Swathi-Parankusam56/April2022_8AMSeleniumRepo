@@ -14,7 +14,7 @@ public class ExtentManager extends BaseTest
 	{
 		if(htmlReport == null)
 		{
-			htmlReport = new ExtentHtmlReporter(projectPath+"\\htmlreports\\report.html");
+			htmlReport = new ExtentHtmlReporter(projectpath+"\\htmlreports\\report.html");
 			htmlReport.config().setDocumentTitle("Automation Report");
 			htmlReport.config().setReportName("Functional Report");
 			htmlReport.config().setTheme(Theme.STANDARD);

@@ -31,7 +31,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest
 {
 	public static WebDriver driver; 
-	public static String projectPath = System.getProperty("user.dir");
+	public static String projectpath = System.getProperty("user.dir");
 	public static FileInputStream fis;
 	public static Properties p;
 	public static Properties mainProp;
@@ -39,30 +39,37 @@ public class BaseTest
 	public static Properties orProp;
 	public static ExtentReports rep;
 	public static ExtentTest test;
+	public static String filePath;
+	
+	static
+	{
+		Date dt = new Date();
+		filePath = dt.toString().replace(':', '_').replace(' ', '_');
+	}
 	
 	public static void init() throws Exception
 	{
-		fis = new FileInputStream(projectPath+"/src/test/resources/environment.properties");
+		fis = new FileInputStream(projectpath+"/src/test/resources/environment.properties");
 		mainProp =new Properties();
 		mainProp.load(fis);
 		String e = mainProp.getProperty("env");
 		System.out.println(e);
 		
-		fis = new FileInputStream(projectPath+"/src/test/resources/"+e+".properties");
+		fis = new FileInputStream(projectpath+"/src/test/resources/"+e+".properties");
 		childProp = new Properties();
 		childProp.load(fis);
 		String url = childProp.getProperty("amazonurl");
 		System.out.println(url);
 		
-		fis = new FileInputStream(projectPath+"/src/test/resources/data.properties");
+		fis = new FileInputStream(projectpath+"/src/test/resources/data.properties");
 		p = new Properties();
 		p.load(fis);
 		
-		fis = new FileInputStream(projectPath+"/src/test/resources/or.properties");
+		fis = new FileInputStream(projectpath+"/src/test/resources/or.properties");
 		orProp = new Properties();
 		orProp.load(fis);
 		
-		fis = new FileInputStream(projectPath+"/src/test/resources/log4jconfig.properties");
+		fis = new FileInputStream(projectpath+"/src/test/resources/log4jconfig.properties");
 		PropertyConfigurator.configure(fis);
 		
 		rep = ExtentManager.getInstance();
@@ -267,9 +274,9 @@ public class BaseTest
 		System.out.println(dt);
 		String dateFormat=dt.toString().replace(":", "_").replace(" ", "_")+".png";		
 		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(scrFile, new File(projectPath+"//failurescreenshots//"+dateFormat));
+		FileHandler.copy(scrFile, new File(projectpath+"//failurescreenshots//"+dateFormat));
 		
-		logInfo("Screenshot --->" +test.addScreenCaptureFromPath(projectPath+"//failurescreenshots//"+dateFormat));
+		logInfo("Screenshot --->" +test.addScreenCaptureFromPath(projectpath+"//failurescreenshots//"+dateFormat));
 	}
 
 }
