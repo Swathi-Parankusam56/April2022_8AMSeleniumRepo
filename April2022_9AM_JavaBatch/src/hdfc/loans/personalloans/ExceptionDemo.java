@@ -30,6 +30,10 @@ public class ExceptionDemo
 			{
 				e.printStackTrace();
 			}
+			finally 
+			{
+				System.out.println("iam final Block");
+			}
 		}
 	}
 
