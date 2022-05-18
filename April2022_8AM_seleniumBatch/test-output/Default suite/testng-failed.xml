@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.TestDependencies">
+      <class name="testnNGAssertions.SoftAssertDemo">
         <methods>
-          <include name="orange"/>
-          <include name="green"/>
-          <include name="blue"/>
-          <include name="white"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- testNG.TestDependencies -->
+      </class> <!-- testnNGAssertions.SoftAssertDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
