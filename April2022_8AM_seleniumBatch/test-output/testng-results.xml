@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-18T03:11:31Z" name="Default suite" finished-at="2022-05-18T03:11:49Z" duration-ms="18141">
+  <suite started-at="2022-05-25T03:36:47Z" name="Default suite" finished-at="2022-05-25T03:36:50Z" duration-ms="2423">
     <groups>
     </groups>
-    <test started-at="2022-05-18T03:11:31Z" name="Default test" finished-at="2022-05-18T03:11:49Z" duration-ms="18141">
-      <class name="testnNGAssertions.SoftAssertDemo">
-        <test-method signature="f()[pri:0, instance:testnNGAssertions.SoftAssertDemo@13b13b5d]" started-at="2022-05-18T03:11:31Z" name="f" finished-at="2022-05-18T03:11:49Z" duration-ms="18053" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2022-05-25T03:36:47Z" name="Default test" finished-at="2022-05-25T03:36:50Z" duration-ms="2423">
+      <class name="excelDataDriven.FinalReview">
+        <test-method signature="f(java.util.Hashtable)[pri:0, instance:excelDataDriven.FinalReview@2abf4075]" started-at="2022-05-25T03:36:50Z" name="f" data-provider="getData" finished-at="2022-05-25T03:36:50Z" duration-ms="39" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=Y, UserPassword=ravi2021, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method signature="f(java.util.Hashtable)[pri:0, instance:excelDataDriven.FinalReview@2abf4075]" started-at="2022-05-25T03:36:50Z" name="f" data-provider="getData" finished-at="2022-05-25T03:36:50Z" duration-ms="6" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=N, UserPassword=password2, UserName=user2, Browser=firefox}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[The following asserts failed:
-Both titles are not equal... expected [true] but found [false],
-err1 expected [true] but found [false],
-err2 expected [true] but found [false],
-err4 expected [true] but found [false]]]>
+              <![CDATA[Test case skipped due to runmode N]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Both titles are not equal... expected [true] but found [false],
-err1 expected [true] but found [false],
-err2 expected [true] but found [false],
-err4 expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at testnNGAssertions.SoftAssertDemo.f(SoftAssertDemo.java:38)
+              <![CDATA[org.testng.SkipException: Test case skipped due to runmode N
+at excelDataDriven.FinalReview.f(FinalReview.java:15)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,11 +60,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- testnNGAssertions.SoftAssertDemo -->
+      </class> <!-- excelDataDriven.FinalReview -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
