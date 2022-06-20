@@ -58,8 +58,8 @@ public class BaseTest
 		fis = new FileInputStream(projectpath+"/src/test/resources/"+e+".properties");
 		childProp = new Properties();
 		childProp.load(fis);
-		String url = childProp.getProperty("amazonurl");
-		System.out.println(url);
+		//String url = childProp.getProperty("amazonurl");
+		//System.out.println(url);
 		
 		fis = new FileInputStream(projectpath+"/src/test/resources/data.properties");
 		p = new Properties();
@@ -77,12 +77,12 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(browser.equals("chrome"))
+		if(p.getProperty(browser).equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			
 			ChromeOptions option = new ChromeOptions();
-			option.addArguments("user-data-dir=C:\\Users\\ravi\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 12");
+			//option.addArguments("user-data-dir=C:\\Users\\ravi\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 12");
 			option.addArguments("--disable-notifications");
 			option.addArguments("--start-maximized");
 			//option.addArguments("--ignore-certificate-errors-spki-list");
@@ -90,7 +90,7 @@ public class BaseTest
 			
 			driver = new ChromeDriver(option);
 		}
-		else if(browser.equals("firefox"))
+		else if(p.getProperty(browser).equals("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			
