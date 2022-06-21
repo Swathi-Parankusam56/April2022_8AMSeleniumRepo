@@ -2,8 +2,10 @@ package launcher;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Random;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
@@ -20,6 +22,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -117,6 +120,8 @@ public class BaseTest
 			
 			driver = new FirefoxDriver(option);
 		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 	}
 	
 	public static void navigateUrl(String urlKey)
@@ -277,6 +282,19 @@ public class BaseTest
 		FileHandler.copy(scrFile, new File(projectpath+"//failurescreenshots//"+dateFormat));
 		
 		logInfo("Screenshot --->" +test.addScreenCaptureFromPath(projectpath+"//failurescreenshots//"+dateFormat));
+	}
+	
+	public static int randomNum()
+	{
+		Random r = new Random();
+		int ran = r.nextInt(99999);
+		return ran;
+	}
+	
+	public void dropDown(WebElement locator,int option)
+	{
+		Select s = new Select(locator);
+		s.selectByIndex(option);
 	}
 
 }

@@ -11,14 +11,24 @@ import org.testng.annotations.AfterMethod;
 public class POM_001 extends BaseTest
 {
 	CustomerLogin obj;
+	CustomerRegistrationPage page;
 	
-  @Test
+  @Test(enabled = false)
   public void f() 
   {
 	   obj = new CustomerLogin(driver);
 	   obj.customerLogin();
 	   Assert.assertEquals(obj.loginVerification(), "Authentication failed.");
   }
+  
+  @Test
+  public void customerReg() throws Exception
+  {
+	  page = new CustomerRegistrationPage(driver);
+	  page.customerRegistration();
+  }
+  
+  
   
   @BeforeMethod
   public void beforeMethod() throws Exception 
