@@ -18,7 +18,7 @@
   </test> <!-- Test -->
   
   
-  <test thread-count="5" name="DeletePortifolioTest">
+  <!--  <test thread-count="5" name="DeletePortifolioTest">
     <classes>
       <class name="testcases.Session">
       	<methods>
@@ -32,6 +32,6 @@
 	      </methods>
       </class>
     </classes>
-  </test> <!-- Test -->
+  </test> --><!-- Test -->
   
 </suite> <!-- Suite -->
