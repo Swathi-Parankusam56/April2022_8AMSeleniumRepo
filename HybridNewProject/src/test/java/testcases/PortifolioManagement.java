@@ -1,14 +1,18 @@
 package testcases;
 
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
 
 public class PortifolioManagement extends BaseTest
 {
 	
   @Test
-  public void createPortifolio()
+  public void createPortifolio(ITestContext context)
   {
-	  System.out.println("createPortifolio");
+	  context.getAttribute("test");
+	  test.log(Status.INFO, "createPortifolio");
   }
   
   @Test

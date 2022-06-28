@@ -13,6 +13,7 @@ public class ApplicationKeywords extends ValidationKeywords
 
 	public ApplicationKeywords() throws Exception 
 	{
+		
 		mainProp = new Properties();
 		childProp= new Properties();
 		orProp = new Properties();
