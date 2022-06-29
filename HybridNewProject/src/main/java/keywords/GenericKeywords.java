@@ -11,6 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -23,10 +28,14 @@ public class GenericKeywords
 	public Properties childProp;
 	public Properties orProp;
 	public WebDriver driver;
+	public ExtentTest test;
+	public SoftAssert softAssert;
 	
 	public void openBrowser(String browserName)
 	{
 		System.out.println("Opening Browser : "+ childProp.getProperty(browserName));
+		//test.log(Status.INFO, "Opening Browser : "+ childProp.getProperty(browserName));
+		log("Opening Browser : "+ childProp.getProperty(browserName));
 		if(childProp.getProperty(browserName).equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -39,16 +48,22 @@ public class GenericKeywords
 	public void navigate(String url)
 	{
 		System.out.println("Navigating url : " +  childProp.getProperty(url));
+		//test.log(Status.INFO, "Navigating url : " +  childProp.getProperty(url));
+		log("Navigating url : " +  childProp.getProperty(url));
 		driver.get(childProp.getProperty(url));
 	}
 	
 	public void click(String locatorKey)
 	{
+		//test.log(Status.INFO, "Clicking on element by using locator :"+ orProp.getProperty(locatorKey));
+		log("Clicking on element by using locator :"+ orProp.getProperty(locatorKey));
 		getElement(locatorKey).click();
 	}
 	
 	public void type(String locatorKey,String textKey)
 	{
+		//test.log(Status.INFO, "Entered the text by using locator :"+ orProp.getProperty(locatorKey));
+		log("Entered the text by using locator :"+ orProp.getProperty(locatorKey));
 		getElement(locatorKey).sendKeys(childProp.getProperty(textKey));
 	}
 	
@@ -79,6 +94,8 @@ public class GenericKeywords
 	public  boolean isElementPresent(String locatorKey) 
 	{
 		System.out.println("Checking for Element Presence : " +  locatorKey);
+		//test.log(Status.INFO, "Checking for Element Presence : " +  locatorKey);
+		log("Checking for Element Presence : " +  locatorKey);
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		
 		try 
@@ -113,6 +130,33 @@ public class GenericKeywords
 		}
 		
 		return by;
+	}
+	
+	public void setReport(ExtentTest test)
+	{
+		this.test=test;
+	}
+	
+	//Reporting Function
+	public void log(String msg)
+	{
+		test.log(Status.INFO, msg);
+	}
+	
+	//Report Faiure
+	public void reportFailure(String failureMsg,boolean stopOnFailure)
+	{
+		softAssert.fail(failureMsg); // Failure msg in TESTNG
+		test.log(Status.FAIL, failureMsg); // Failure msg in Extent Reports
+		
+		if(stopOnFailure)
+			assertAll();
+	}
+	
+	public void assertAll()
+	{
+		Reporter.getCurrentTestResult().getTestContext().setAttribute("criticalFailure", "Y");
+		softAssert.assertAll();
 	}
 
 }

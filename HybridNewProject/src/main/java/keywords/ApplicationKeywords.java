@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
 
 public class ApplicationKeywords extends ValidationKeywords
 {
@@ -35,6 +36,7 @@ public class ApplicationKeywords extends ValidationKeywords
 			e.printStackTrace();
 		}
 		
+		softAssert = new SoftAssert();
 		
 	}
 	

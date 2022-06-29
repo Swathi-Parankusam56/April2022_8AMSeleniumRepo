@@ -13,6 +13,9 @@ public class PortifolioManagement extends BaseTest
   {
 	  context.getAttribute("test");
 	  test.log(Status.INFO, "createPortifolio");
+	  //report
+	  app.reportFailure("Some non critical failures",false);
+	  app.assertAll();
   }
   
   @Test
