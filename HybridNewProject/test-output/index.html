@@ -182,6 +182,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.MyTestListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;CreatePortifolioTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.Session&quot;&gt;
@@ -237,7 +240,7 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'doLogin')
 data.setCell(0, 2, 'testcases.Session')
-data.setCell(0, 3, 10589);
+data.setCell(0, 3, 15648);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createPortifolio')
 data.setCell(1, 2, 'testcases.PortifolioManagement')
@@ -246,7 +249,7 @@ window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -294,18 +297,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Session</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(org.testng.TestRunner@8851ce1)</span>
+                <span class="method-name">beforeTest(org.testng.TestRunner@7f6874f2)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@8851ce1)</span>
-                <span class="method-start">1011 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@7f6874f2)</span>
+                <span class="method-start">1426 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">doLogin</span>
-                <span class="method-start">1013 ms</span>
+                <span class="method-start">1428 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -313,22 +316,22 @@ return data;
               <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">beforeMethod(org.testng.TestRunner@8851ce1)</span>
-                <span class="method-start">11618 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@7f6874f2)</span>
+                <span class="method-start">17088 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Session</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">quit</span>
-                <span class="method-start">11641 ms</span>
+                <span class="method-start">17110 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.PortifolioManagement</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">createPortifolio</span>
-                <span class="method-start">-1656470105489 ms</span>
+                <span class="method-start">-1656986270835 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

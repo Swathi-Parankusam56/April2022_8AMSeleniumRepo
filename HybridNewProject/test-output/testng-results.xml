@@ -2,16 +2,16 @@
 <testng-results ignored="5" total="7" passed="0" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-29T02:35:05Z" name="Suite" finished-at="2022-06-29T02:35:18Z" duration-ms="13251">
+  <suite started-at="2022-07-05T01:57:50Z" name="Suite" finished-at="2022-07-05T01:58:09Z" duration-ms="18950">
     <groups>
     </groups>
-    <test started-at="2022-06-29T02:35:05Z" name="CreatePortifolioTest" finished-at="2022-06-29T02:35:18Z" duration-ms="13251">
+    <test started-at="2022-07-05T01:57:50Z" name="CreatePortifolioTest" finished-at="2022-07-05T01:58:09Z" duration-ms="18950">
       <class name="testcases.PortifolioManagement">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@65f095f8]" started-at="2022-06-29T02:35:17Z" name="beforeMethod" finished-at="2022-06-29T02:35:17Z" duration-ms="2" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@346d61be]" started-at="2022-07-05T01:58:07Z" name="beforeMethod" finished-at="2022-07-05T01:58:07Z" duration-ms="2" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@8851ce1]]>
+                <![CDATA[org.testng.TestRunner@7f6874f2]]>
               </value>
             </param>
           </params>
@@ -56,7 +56,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="createPortifolio(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@65f095f8]" started-at="2022-06-29T02:35:17Z" name="createPortifolio" finished-at="2022-06-29T02:35:17Z" duration-ms="0" status="SKIP">
+        <test-method signature="createPortifolio(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@346d61be]" started-at="2022-07-05T01:58:07Z" name="createPortifolio" finished-at="2022-07-05T01:58:07Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "this.test" is null]]>
@@ -100,29 +100,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- createPortifolio -->
       </class> <!-- testcases.PortifolioManagement -->
       <class name="testcases.Session">
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.Session@3a6bb9bf]" started-at="2022-06-29T02:35:05Z" name="beforeTest" finished-at="2022-06-29T02:35:06Z" duration-ms="955" status="PASS">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.Session@59af0466]" started-at="2022-07-05T01:57:50Z" name="beforeTest" finished-at="2022-07-05T01:57:52Z" duration-ms="1393" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@8851ce1]]>
+                <![CDATA[org.testng.TestRunner@7f6874f2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.Session@3a6bb9bf]" started-at="2022-06-29T02:35:06Z" name="beforeMethod" finished-at="2022-06-29T02:35:06Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.Session@59af0466]" started-at="2022-07-05T01:57:52Z" name="beforeMethod" finished-at="2022-07-05T01:57:52Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@8851ce1]]>
+                <![CDATA[org.testng.TestRunner@7f6874f2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="doLogin()[pri:0, instance:testcases.Session@3a6bb9bf]" started-at="2022-06-29T02:35:06Z" name="doLogin" finished-at="2022-06-29T02:35:17Z" duration-ms="10589" status="FAIL">
+        <test-method signature="doLogin()[pri:0, instance:testcases.Session@59af0466]" started-at="2022-07-05T01:57:52Z" name="doLogin" finished-at="2022-07-05T01:58:07Z" duration-ms="15648" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -166,7 +166,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.Session@3a6bb9bf]" started-at="2022-06-29T02:35:17Z" name="quit" finished-at="2022-06-29T02:35:18Z" duration-ms="1607" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.Session@59af0466]" started-at="2022-07-05T01:58:07Z" name="quit" finished-at="2022-07-05T01:58:09Z" duration-ms="1818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
