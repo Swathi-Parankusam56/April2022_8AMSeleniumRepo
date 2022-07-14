@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,6 +61,11 @@ public class GenericKeywords
 		//test.log(Status.INFO, "Clicking on element by using locator :"+ orProp.getProperty(locatorKey));
 		log("Clicking on element by using locator :"+ orProp.getProperty(locatorKey));
 		getElement(locatorKey).click();
+	}
+	
+	public void clickEnterButton(String locatorKey) {
+		log("Clinking enter button");
+		getElement(locatorKey).sendKeys(Keys.ENTER);
 	}
 	
 	public void type(String locatorKey,String textKey)

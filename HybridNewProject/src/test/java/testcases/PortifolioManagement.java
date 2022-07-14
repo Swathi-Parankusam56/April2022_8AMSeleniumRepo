@@ -35,4 +35,15 @@ public class PortifolioManagement extends BaseTest
 	  app.validateSelectedValueNotInDropDown("portfolioid_dropdown_id", portifolioName);
   }
   
+  @Test
+	public void selectPortFolio(ITestContext context) 
+	{
+		String portfolioName = "portfoli012345";
+		//JSONObject data = (JSONObject)context.getAttribute("data");
+		//String portfolioName=(String)data.get("portfolioname");		
+		app.log("Selecting Profolio");
+		app.selectVisibleText("portfolioid_dropdown_id", portfolioName);
+        app.waitForPageToLoad();
+	}
+  
 }

@@ -3,8 +3,11 @@ package keywords;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 
@@ -41,15 +44,29 @@ public class ApplicationKeywords extends ValidationKeywords
 	}
 	
 	
-
-	public void login() 
+	public void selectDateFromCalendar(String date) 
 	{
+		log("Selecting Date "+date);
 		
-	}
-	
-	public void selectDatefromcalander()
-	{
-		
+		try 
+		{
+			Date currentDate = new Date();
+			Date dateToSel=new SimpleDateFormat("d-MM-yyyy").parse(date);
+			String day=new SimpleDateFormat("d").format(dateToSel);
+			String month=new SimpleDateFormat("MMMM").format(dateToSel);
+			String year=new SimpleDateFormat("yyyy").format(dateToSel);
+			String monthYearToBeSelected=month+" "+year;
+			String monthYearDisplayed=getElement("monthyear_css").getText();
+			
+			while(!monthYearToBeSelected.equals(monthYearDisplayed)) {
+				click("datebackButoon_xpath");
+				monthYearDisplayed=getElement("monthyear_css").getText();
+			}
+			driver.findElement(By.xpath("//td[text()='"+day+"']")).click();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
