@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Add Newstock Test">
+    <classes>
+      <class name="testcases.PortifolioManagement">
+      	<methods>
+      		<include name="selectPortFolio"></include>
+      	</methods>
+      </class>
+      
+      <class name="testcases.StockManagement">
+      	<methods>
+      		<include name="addNewStock"></include>
+      		<include name="verifyStockPresent"></include>
+      		<include name="verifyStockQuantity"></include>
+      		<include name="verifyTransactionHistory"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Modify StockTest - sell Stock">
+  <parameter name="action" value="sellStock"></parameter>
+	  <classes>
+	    <class name="testcases.PortifolioManagement">
+	      	<methods>
+	      		<include name="selectPortFolio"></include>
+	      	</methods>
+	    </class>
+	      
+	     <class name="testcases.StockManagement">
+		     <methods>
+		     	<include name="verifyStockPresent"></include>
+	      		<include name="modifyStock"></include>
+	      		<include name="verifyStockPresent"></include>
+	      		<include name="verifyStockQuantity"></include>
+	      		<include name="verifyTransactionHistory"></include>
+		     </methods>
+	     </class>
+	  </classes>
+  </test>
+  
+  
+  <test name="Modify StockTest - Buy Stock">
+  <parameter name="action" value="BuyStock"></parameter>
+	  <classes>
+	  
+	    <class name="testcases.PortifolioManagement">
+	      	<methods>
+	      		<include name="selectPortFolio"></include>
+	      	</methods>
+	    </class>
+	      
+	     <class name="testcases.StockManagement">
+		     <methods>
+		     	<include name="verifyStockPresent"></include>
+	      		<include name="modifyStock"></include>
+	      		<include name="verifyStockPresent"></include>
+	      		<include name="verifyStockQuantity"></include>
+	      		<include name="verifyTransactionHistory"></include>
+		     </methods>
+	     </class>
+	  </classes>
+  </test>
+  
+</suite> <!-- Suite -->

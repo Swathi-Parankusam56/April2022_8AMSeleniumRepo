@@ -2,6 +2,7 @@ package keywords;
 
 import java.io.FileInputStream;
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -178,6 +179,15 @@ public class GenericKeywords
 		s.selectByVisibleText(data);
 	}
 	
+	public void selectByVisibleText(String locatorKey, String data) {
+		Select s = new Select(getElement(locatorKey));
+		s.selectByVisibleText(data);
+	}
+	
+	public String getText(String locatorKey) {
+		return getElement(locatorKey).getText();
+	}
+	
 	public void acceptAlert()
 	{
 		test.log(Status.INFO, "Switching to alert");
@@ -233,6 +243,35 @@ public class GenericKeywords
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+
+	// finds the row number of the data
+	public int getRowNumWithCellData(String tableLocator, String data) 
+	{
+		WebElement table = getElement(tableLocator);
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+		for(int rNum=0;rNum<rows.size();rNum++) 
+		{
+			WebElement row = rows.get(rNum);
+			List<WebElement> cells = row.findElements(By.tagName("td"));
+			for(int cNum=0;cNum<cells.size();cNum++) 
+			{
+				WebElement cell = cells.get(cNum);
+				System.out.println("Text "+ cell.getText());
+				if(!cell.getText().trim().equals(""))
+					if(data.startsWith(cell.getText()))
+						return(rNum+1);
+			}
+		}
+		
+		return -1; // data is not found
+	}
+	
+
+	public void quit() 
+	{
+		driver.quit();	
 	}
 
 }

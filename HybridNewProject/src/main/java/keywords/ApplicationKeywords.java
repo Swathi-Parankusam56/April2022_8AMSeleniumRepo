@@ -69,4 +69,43 @@ public class ApplicationKeywords extends ValidationKeywords
 		}
 	}
 	
+	public int findCurrentStockQuantity(String companyName) 
+	{
+		log("Finding current stock quantity for "+ companyName);
+		int row = getRowNumWithCellData("stocktable_css",companyName);
+		if(row==-1) {
+			log("Current Stock Quantity is 0 as Stock not present in list");
+			return 0;
+		}
+		// table#stock > tbody > tr:nth-child(2) >td:nth-child(4)
+		String quantity = driver.findElement(By.cssSelector(mainProp.getProperty("stocktable_css")+" > tr:nth-child("+row+") >td:nth-child(4)")).getText();
+		log("Current stock Quantity "+quantity);
+		return Integer.parseInt(quantity);
+	}
+
+	public void goToBuySell(String companyName) 
+	{
+		log("Selecting the company row "+companyName );
+		int row = getRowNumWithCellData("stocktable_css", companyName);
+		if(row==-1) {
+			log("Stock not present in list");
+		}
+		driver.findElement(By.cssSelector(mainProp.getProperty("stocktable_css")+" > tr:nth-child("+row+") >td:nth-child(1)")).click();
+		driver.findElement(By.cssSelector(mainProp.getProperty("stocktable_css")+"  tr:nth-child("+row+") input.buySell" )).click();
+		
+	}
+
+	public void goToTransactionHistory(String companyName) 
+	{
+	    log("Selecting the company row "+companyName );
+		int row = getRowNumWithCellData("stocktable_css", companyName);
+		if(row==-1) {
+			log("Stock not present in list");
+			// report failure
+		}
+		driver.findElement(By.cssSelector(mainProp.getProperty("stocktable_css")+" > tr:nth-child("+row+") >td:nth-child(1)")).click();
+		driver.findElement(By.cssSelector(mainProp.getProperty("stocktable_css")+"  tr:nth-child("+row+") input.equityTransaction" )).click();
+		
+	}
+	
 }
