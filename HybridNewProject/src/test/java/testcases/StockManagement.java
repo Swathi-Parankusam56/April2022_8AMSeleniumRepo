@@ -8,7 +8,7 @@ public class StockManagement extends BaseTest
 {
 	
   @Test
-  public void addNewStock() 
+  public void addNewStock(ITestContext context) 
   {
 	    
 	    String companyName = "Birla Corporation Ltd";
@@ -20,7 +20,7 @@ public class StockManagement extends BaseTest
 		// find quantity
 		int quatityBeforeModification = app.findCurrentStockQuantity(companyName);
 		
-		//context.setAttribute("quatityBeforeModification", quatityBeforeModification);
+		context.setAttribute("quatityBeforeModification", quatityBeforeModification);
 		
 		app.click("addStock_id");
 		app.type("addstockname_css", companyName);
