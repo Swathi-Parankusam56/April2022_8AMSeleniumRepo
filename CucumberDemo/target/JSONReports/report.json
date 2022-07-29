@@ -1,0 +1,77 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-07-29T02:33:23.979Z",
+        "line": 4,
+        "name": "Check login is successful with valid credientials",
+        "description": "",
+        "id": "test-login-functionality;check-login-is-successful-with-valid-credientials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5330100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on login page",
+            "match": {
+              "location": "stepDefination.LoginSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2091200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters username and password",
+            "match": {
+              "location": "stepDefination.LoginSteps.user_enters_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1999800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Clicks on login button",
+            "match": {
+              "location": "stepDefination.LoginSteps.clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1544700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is naviaged to Home Page",
+            "match": {
+              "location": "stepDefination.LoginSteps.user_is_naviaged_to_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Test login Functionality",
+    "description": "",
+    "id": "test-login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/login.feature",
+    "tags": []
+  }
+]
