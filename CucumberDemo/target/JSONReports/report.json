@@ -3,75 +3,123 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-07-29T02:33:23.979Z",
-        "line": 4,
-        "name": "Check login is successful with valid credientials",
+        "start_timestamp": "2022-08-02T02:34:54.105Z",
+        "line": 12,
+        "name": "To check login is successful with valid credientials",
         "description": "",
-        "id": "test-login-functionality;check-login-is-successful-with-valid-credientials",
+        "id": "to-test-loginfunctionality;to-check-login-is-successful-with-valid-credientials;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 5330100,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 5,
-            "name": "User is on login page",
-            "match": {
-              "location": "stepDefination.LoginSteps.user_is_on_login_page()"
-            },
+            "line": 4,
+            "name": "navigate the browser",
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2091200,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 6,
-            "name": "user enters username and password",
-            "match": {
-              "location": "stepDefination.LoginSteps.user_enters_username_and_password()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1999800,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Clicks on login button",
-            "match": {
-              "location": "stepDefination.LoginSteps.clicks_on_login_button()"
-            },
+            "line": 5,
+            "name": "customer is on login page",
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1544700,
-              "status": "passed"
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user enters ravilella and 12345",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "user should click on login",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
             },
             "line": 8,
-            "name": "User is naviaged to Home Page",
-            "match": {
-              "location": "stepDefination.LoginSteps.user_is_naviaged_to_home_page()"
-            },
+            "name": "user should navigate to home page",
+            "match": {},
             "keyword": "Then "
           }
-        ],
-        "tags": [
+        ]
+      },
+      {
+        "start_timestamp": "2022-08-02T02:34:54.561Z",
+        "line": 13,
+        "name": "To check login is successful with valid credientials",
+        "description": "",
+        "id": "to-test-loginfunctionality;to-check-login-is-successful-with-valid-credientials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
           {
-            "name": "@regression"
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "navigate the browser",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "customer is on login page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "user enters sai+12345 and ",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "user should click on login",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user should navigate to home page",
+            "match": {},
+            "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Test login Functionality",
+    "name": "To Test LoginFunctionality",
     "description": "",
-    "id": "test-login-functionality",
+    "id": "to-test-loginfunctionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Features/login.feature",
+    "uri": "file:src/test/resources/Features/loginpage.feature",
     "tags": []
   }
 ]

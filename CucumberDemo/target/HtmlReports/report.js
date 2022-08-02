@@ -1,57 +1,147 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/loginpage.feature");
 formatter.feature({
-  "name": "Test login Functionality",
+  "name": "To Test LoginFunctionality",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Check login is successful with valid credientials",
+formatter.scenarioOutline({
+  "name": "To check login is successful with valid credientials",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "navigate the browser",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "customer is on login page",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \u003cusername\u003e and \u003cpassword\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should click on login",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user should navigate to home page",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
     {
-      "name": "@regression"
+      "cells": [
+        "username",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "ravilella",
+        "12345"
+      ]
+    },
+    {
+      "cells": [
+        "sai+12345",
+        ""
+      ]
     }
   ]
 });
+formatter.scenario({
+  "name": "To check login is successful with valid credientials",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
 formatter.step({
-  "name": "User is on login page",
+  "name": "navigate the browser",
   "keyword": "Given "
 });
-formatter.match({
-  "location": "stepDefination.LoginSteps.user_is_on_login_page()"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.step({
-  "name": "user enters username and password",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "stepDefination.LoginSteps.user_enters_username_and_password()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Clicks on login button",
+  "name": "customer is on login page",
   "keyword": "And "
 });
-formatter.match({
-  "location": "stepDefination.LoginSteps.clicks_on_login_button()"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.step({
-  "name": "User is naviaged to Home Page",
+  "name": "user enters ravilella and 12345",
+  "keyword": "When "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user should click on login",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user should navigate to home page",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "stepDefination.LoginSteps.user_is_naviaged_to_home_page()"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
+});
+formatter.scenario({
+  "name": "To check login is successful with valid credientials",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "navigate the browser",
+  "keyword": "Given "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "customer is on login page",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user enters sai+12345 and ",
+  "keyword": "When "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user should click on login",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user should navigate to home page",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 });
