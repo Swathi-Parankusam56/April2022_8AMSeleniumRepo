@@ -1,147 +1,50 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/loginpage.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FetureTags/Tags.feature");
 formatter.feature({
-  "name": "To Test LoginFunctionality",
+  "name": "Feature for the demo tags",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "To check login is successful with valid credientials",
+formatter.scenario({
+  "name": "Sample Scenario1",
   "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "navigate the browser",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "customer is on login page",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user enters \u003cusername\u003e and \u003cpassword\u003e",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should click on login",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user should navigate to home page",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
+  "keyword": "Scenario",
+  "tags": [
     {
-      "cells": [
-        "username",
-        "password"
-      ]
-    },
-    {
-      "cells": [
-        "ravilella",
-        "12345"
-      ]
-    },
-    {
-      "cells": [
-        "sai+12345",
-        ""
-      ]
+      "name": "@smoke"
     }
   ]
 });
-formatter.scenario({
-  "name": "To check login is successful with valid credientials",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
 formatter.step({
-  "name": "navigate the browser",
+  "name": "browseropen",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepDefination.TagsStep.browseropen()"
+});
 formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "customer is on login page",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user enters ravilella and 12345",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user should click on login",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user should navigate to home page",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.scenario({
-  "name": "To check login is successful with valid credientials",
+  "name": "",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@regression"
+    },
+    {
+      "name": "@smoke"
+    }
+  ]
 });
 formatter.step({
-  "name": "navigate the browser",
+  "name": "browseropen",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepDefination.TagsStep.browseropen()"
+});
 formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "customer is on login page",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user enters sai+12345 and ",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user should click on login",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user should navigate to home page",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 });

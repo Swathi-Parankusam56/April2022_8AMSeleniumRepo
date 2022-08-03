@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="1.189">
-    <testcase classname="To Test LoginFunctionality" name="To check login is successful with valid credientials" time="0.392">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given navigate the browser..................................................undefined
-And customer is on login page...............................................undefined
-When user enters ravilella and 12345........................................undefined
-And user should click on login..............................................undefined
-Then user should navigate to home page......................................undefined
-]]></failure>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="1.115">
+    <testcase classname="Feature for the demo tags" name="Sample Scenario1" time="0.33">
+        <system-out><![CDATA[Given browseropen...........................................................passed
+]]></system-out>
     </testcase>
-    <testcase classname="To Test LoginFunctionality" name="To check login is successful with valid credientials 2" time="0.006">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given navigate the browser..................................................undefined
-And customer is on login page...............................................undefined
-When user enters sai+12345 and .............................................undefined
-And user should click on login..............................................undefined
-Then user should navigate to home page......................................undefined
-]]></failure>
+    <testcase classname="Feature for the demo tags" name="" time="0.008">
+        <system-out><![CDATA[Given browseropen...........................................................passed
+]]></system-out>
     </testcase>
 </testsuite>

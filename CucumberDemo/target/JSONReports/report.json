@@ -3,123 +3,70 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-02T02:34:54.105Z",
-        "line": 12,
-        "name": "To check login is successful with valid credientials",
+        "start_timestamp": "2022-08-03T02:20:05.680Z",
+        "line": 4,
+        "name": "Sample Scenario1",
         "description": "",
-        "id": "to-test-loginfunctionality;to-check-login-is-successful-with-valid-credientials;;2",
+        "id": "feature-for-the-demo-tags;sample-scenario1",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
-            },
-            "line": 4,
-            "name": "navigate the browser",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
+              "duration": 2988100,
+              "status": "passed"
             },
             "line": 5,
-            "name": "customer is on login page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "name": "browseropen",
+            "match": {
+              "location": "stepDefination.TagsStep.browseropen()"
             },
-            "line": 6,
-            "name": "user enters ravilella and 12345",
-            "match": {},
-            "keyword": "When "
-          },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
           {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 7,
-            "name": "user should click on login",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 8,
-            "name": "user should navigate to home page",
-            "match": {},
-            "keyword": "Then "
+            "name": "@smoke"
           }
         ]
       },
       {
-        "start_timestamp": "2022-08-02T02:34:54.561Z",
-        "line": 13,
-        "name": "To check login is successful with valid credientials",
+        "start_timestamp": "2022-08-03T02:20:06.060Z",
+        "line": 8,
+        "name": "",
         "description": "",
-        "id": "to-test-loginfunctionality;to-check-login-is-successful-with-valid-credientials;;3",
+        "id": "feature-for-the-demo-tags;",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 996900,
+              "status": "passed"
             },
-            "line": 4,
-            "name": "navigate the browser",
-            "match": {},
+            "line": 9,
+            "name": "browseropen",
+            "match": {
+              "location": "stepDefination.TagsStep.browseropen()"
+            },
             "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression"
           },
           {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 5,
-            "name": "customer is on login page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 6,
-            "name": "user enters sai+12345 and ",
-            "match": {},
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 7,
-            "name": "user should click on login",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 8,
-            "name": "user should navigate to home page",
-            "match": {},
-            "keyword": "Then "
+            "name": "@smoke"
           }
         ]
       }
     ],
-    "name": "To Test LoginFunctionality",
+    "name": "Feature for the demo tags",
     "description": "",
-    "id": "to-test-loginfunctionality",
+    "id": "feature-for-the-demo-tags",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Features/loginpage.feature",
+    "uri": "file:src/test/resources/FetureTags/Tags.feature",
     "tags": []
   }
 ]

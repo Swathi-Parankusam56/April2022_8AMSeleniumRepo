@@ -10,4 +10,4 @@ Feature: To Test LoginFunctionality
     Examples: 
       | username  | password |
       | ravilella |    12345 |
-      | sai+12345 |          |
+      | sai       |    12345 |

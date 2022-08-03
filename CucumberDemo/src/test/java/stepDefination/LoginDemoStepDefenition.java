@@ -33,11 +33,11 @@ public class LoginDemoStepDefenition
 		driver.get("https://example.testproject.io/web/");
 	}
 	
-	@When("user enters (.*) and (.*)")
-	public void user_enters_username_and_password()
+	@When("^user enters (.*) and (.*)$")
+	public void user_enters_username_and_password(String username,String password)
 	{
-		driver.findElement(By.id("name")).sendKeys("ravilella");
-		driver.findElement(By.id("password")).sendKeys("12345");
+		driver.findElement(By.id("name")).sendKeys(username);
+		driver.findElement(By.id("password")).sendKeys(password);
 	}
 	
 	@And("user should click on login")
