@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="1.115">
-    <testcase classname="Feature for the demo tags" name="Sample Scenario1" time="0.33">
-        <system-out><![CDATA[Given browseropen...........................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="1.53">
+    <testcase classname="Amazon product Test" name="Verifying login is successful with valid credientials" time="0.804">
+        <system-out><![CDATA[Given user should ne on login page..........................................passed
+When user fills username  and password......................................passed
+And clicks on SignIn button.................................................passed
+Then user is navigated to the main page.....................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Feature for the demo tags" name="" time="0.008">
-        <system-out><![CDATA[Given browseropen...........................................................passed
+    <testcase classname="Amazon product Test" name="To check product added to addtokart page" time="0.102">
+        <system-out><![CDATA[Given user is on product page...............................................passed
+When user shoud selects the product.........................................passed
+Then product should add to kart page........................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

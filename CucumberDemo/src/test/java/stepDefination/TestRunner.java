@@ -6,9 +6,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/FetureTags/Tags.feature"}, glue = {"stepDefination"}, 
+@CucumberOptions(features = {"src/test/resources/Features/hooks.feature"}, glue = {"stepDefination"}, 
                  monochrome = true, strict = true, dryRun = false, plugin = {"pretty","html:target/HtmlReports",
-                 "json:target/JSONReports/report.json","junit:target/JUNITReports/report.xml"},tags= {"@smoke or @smoke and @regression or regression"})
+                 "json:target/JSONReports/report.json","junit:target/JUNITReports/report.xml"},tags= {""})
 public class TestRunner
 {
 

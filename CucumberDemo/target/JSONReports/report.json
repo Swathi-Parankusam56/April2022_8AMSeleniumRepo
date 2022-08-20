@@ -3,70 +3,169 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-03T02:20:05.680Z",
+        "start_timestamp": "2022-08-20T02:53:24.710Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4986100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefination.HooksStepDefination.befores()"
+            }
+          }
+        ],
         "line": 4,
-        "name": "Sample Scenario1",
+        "name": "Verifying login is successful with valid credientials",
         "description": "",
-        "id": "feature-for-the-demo-tags;sample-scenario1",
+        "id": "amazon-product-test;verifying-login-is-successful-with-valid-credientials",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefination.HooksStepDefination.afters()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2988100,
+              "duration": 3989600,
               "status": "passed"
             },
             "line": 5,
-            "name": "browseropen",
+            "name": "user should ne on login page",
             "match": {
-              "location": "stepDefination.TagsStep.browseropen()"
+              "location": "stepDefination.HooksStepDefination.user_should_ne_on_login_page()"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1994400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user fills username  and password",
+            "match": {
+              "location": "stepDefination.HooksStepDefination.user_fills_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14961100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "clicks on SignIn button",
+            "match": {
+              "location": "stepDefination.HooksStepDefination.clicks_on_SignIn_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2988800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is navigated to the main page",
+            "match": {
+              "location": "stepDefination.HooksStepDefination.user_is_navigated_to_the_main_page()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@smoke"
+            "name": "@s1"
           }
         ]
       },
       {
-        "start_timestamp": "2022-08-03T02:20:06.060Z",
-        "line": 8,
-        "name": "",
+        "start_timestamp": "2022-08-20T02:53:25.590Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3990300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefination.HooksStepDefination.startProcess()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "To check product added to addtokart page",
         "description": "",
-        "id": "feature-for-the-demo-tags;",
+        "id": "amazon-product-test;to-check-product-added-to-addtokart-page",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefination.HooksStepDefination.endProcess()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 996900,
+              "duration": 1993000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "browseropen",
+            "line": 12,
+            "name": "user is on product page",
             "match": {
-              "location": "stepDefination.TagsStep.browseropen()"
+              "location": "stepDefination.HooksStepDefination.user_is_on_product_page()"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2993000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user shoud selects the product",
+            "match": {
+              "location": "stepDefination.HooksStepDefination.user_shoud_selects_the_product()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2991300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "product should add to kart page",
+            "match": {
+              "location": "stepDefination.HooksStepDefination.product_should_add_to_kart_page()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@regression"
-          },
-          {
-            "name": "@smoke"
+            "name": "@s2"
           }
         ]
       }
     ],
-    "name": "Feature for the demo tags",
+    "name": "Amazon product Test",
     "description": "",
-    "id": "feature-for-the-demo-tags",
+    "id": "amazon-product-test",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/FetureTags/Tags.feature",
+    "uri": "file:src/test/resources/Features/hooks.feature",
     "tags": []
   }
 ]
